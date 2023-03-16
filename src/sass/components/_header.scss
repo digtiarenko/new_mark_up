@@ -1,0 +1,338 @@
+.hero {
+  &_section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.7)),
+        to(rgba(0, 0, 0, 0))
+      ),
+      url('../images/hero_bg.png');
+    background-image: -o-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url('../images/hero_bg.png');
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url('../images/hero_bg.png');
+    background-size: 100% 500px, cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+
+    @include for-size(mobile) {
+      background-size: 100% 420px, cover;
+      background-position: 40% 0%;
+    }
+    @include for-size(mobile-only) {
+      background-size: 100% 420px, cover;
+      background-position: 40% 0%;
+    }
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_text_wrapper {
+    width: 520px;
+    margin-right: 180px;
+
+    @include for-size(tablet) {
+      width: auto;
+      margin-right: 100px;
+    }
+    @include for-size(mobile) {
+      width: auto;
+      margin-right: 0;
+    }
+    @include for-size(mobile-only) {
+      width: auto;
+      margin-right: 0;
+    }
+  }
+
+  &_header {
+    font-size: 64px;
+    color: white;
+    font-weight: 500;
+    line-height: 1.05;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.85);
+    margin-bottom: 16px;
+
+    @include for-size(mobile) {
+      font-size: 34px;
+    }
+    @include for-size(mobile-only) {
+      font-size: 34px;
+    }
+  }
+  &_subheader {
+    color: white;
+    font-weight: 400;
+
+    font-size: 24px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.85);
+  }
+
+  &_link {
+    gap: 13px;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 13px;
+    border-radius: 5%;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.85);
+
+    .icon {
+      vertical-align: middle;
+    }
+
+    &:hover {
+      color: black;
+      & .icon {
+        fill: black;
+        stroke: black;
+      }
+    }
+  }
+}
+
+.header_form_buton {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 16px 24px 16px 24px;
+  border: none;
+  border-radius: 51px;
+  width: 140px;
+  min-width: 80px;
+  height: 48px;
+  background-color: rgba(89, 97, 114, 1);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
+  @include for-size(mobile) {
+    margin: 16px;
+  }
+  @include for-size(mobile-only) {
+    margin: 16px;
+  }
+
+  &:hover {
+    color: black;
+    background-color: $accent-btn-color;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+
+    & .icon {
+      fill: black;
+      stroke: black;
+    }
+  }
+}
+
+.btn--menu {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 72px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 117px;
+  height: 48px;
+  background-color: white;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+
+  & .icon {
+    stroke: black;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $accent-btn-color;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+    & .icon {
+      stroke: white;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 31px;
+  margin-bottom: 60px;
+
+  @include for-size(mobile) {
+    display: block;
+  }
+  @include for-size(mobile-only) {
+    display: block;
+  }
+
+  &_form {
+    max-width: 600px;
+    width: 100%;
+    margin-top: 98px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 102px;
+
+    align-self: center;
+    box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.09);
+
+    &_input {
+      max-width: 400px;
+      width: 100%;
+      padding: 24px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+
+      @include for-size(mobile) {
+        padding: 24px 24px 24px 12px;
+      }
+      @include for-size(mobile-only) {
+        padding: 24px 24px 24px 12px;
+      }
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 24px;
+      }
+    }
+  }
+  &-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-left: 11px;
+    margin-right: 11px;
+    position: relative;
+
+    @include for-size(tablet) {
+      display: none;
+      margin-left: 40px;
+    }
+
+    & .number {
+      margin-right: 10px;
+    }
+  }
+
+  &-toolbar {
+    max-width: 551px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-size(mobile) {
+      display: none;
+    }
+    @include for-size(mobile-only) {
+      display: none;
+    }
+  }
+}
+
+.vertical-line::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 50px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  left: -17px;
+}
+
+.button-notification {
+  margin-left: 2px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 5%;
+
+  &:hover {
+    color: black;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+    background-color: rgb(252, 248, 248, 0.3);
+
+    & .icon {
+      fill: black;
+      stroke: black;
+    }
+  }
+}
+
+.icon {
+  fill: white;
+  stroke: white;
+}
+
+.lang {
+  font-size: 18px;
+  padding: 11px 11px 10px 15px;
+  border-radius: 5%;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  background-image: url("data:image/svg+xml,<svg width='24' height='24' fill='white' xmlns='http://www.w3.org/2000/svg'><path d='m0,6l12,12l12,-12l-24,0z'/><path fill='none' d='m0,0l24,0l0,24l-24,0l0,-24z'/></svg>");
+  background-repeat: no-repeat, repeat;
+  background-position: 5px;
+  background-size: 10px 10px;
+  fill: black;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  &:hover {
+    background-color: rgb(252, 248, 248, 0.3);
+  }
+
+  & option {
+    color: black;
+  }
+}
+.btn {
+  width: 140px;
+  height: 48px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px 43px;
+  border: none;
+  background-color: $accent-btn-color;
+  border-radius: 80px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+  }
+}
