@@ -2,7 +2,6 @@
 <html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +13,18 @@
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
-    <main></main>
+    <include src="./partials/header.html"></include>
+    <main>
+      <div class="bg-overlay container">
+        <include src="./partials/help_section.html"></include>
+        <include src="./partials/articles_section.html"></include>
+      </div>
+      <div class="bg-overlay2">
+        <include src="./partials/about_section.html"></include>
+        <include src="./partials/donate_section.html"></include>
+        <include src="./partials/video_section.html"></include>
+      </div>
+    </main>
+    <include src="./partials/footer.html"></include>
   </body>
 </html>
