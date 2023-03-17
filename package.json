@@ -2,10 +2,10 @@
   "name": "test_markup_creative_it",
   "version": "2.0.0",
   "description": "this is a rtl-flow landing",
-  "homepage": "https://digtiarenko.github.io/test_markup_creativeIT",
+  "homepage": "https://digtiarenko.github.io/new_mark_up",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /test_markup_creativeIT/"
+    "build": "parcel build src/*.html --public-url /new_mark_up/"
   },
   "keywords": [],
   "license": "ISC",
